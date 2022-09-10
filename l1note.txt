@@ -57,13 +57,19 @@ go to terminal and enter "npm run build"
 
 
 
+=>Watch
+go to package.json , write down
+      "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build" : "tailwind -i ./tailwind/main.css -o ./public/tailwind.css",
+    "watch": "tailwind -i ./tailwind/main.css -o ./public/tailwind.css -w"
 
-27NM
+  }
 
 
 
 
-28BD
+
 
 
 

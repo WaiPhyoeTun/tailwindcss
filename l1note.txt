@@ -58,7 +58,7 @@ go to terminal and enter "npm run build"
 
 
 =>Watch
-go to package.json , write down
+go to package.json , write down npm run watch
       "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build" : "tailwind -i ./tailwind/main.css -o ./public/tailwind.css",
@@ -93,7 +93,7 @@ menu => view => extension => …….. unstall
 
 
 
--------------------------------------------------------
+-----------------------------------------------------
 3 Using PostCSS
 
 1. Terminal
@@ -107,7 +107,7 @@ npx tailwindcss init
 3. Create file postcss.config.js
 
 4. postcss.config.js
-
+		
 module.exports = {
   plugins: {
     tailwindcss: {},
@@ -119,9 +119,9 @@ module.exports = {
 
 6.tailwind.config.js
 
-/ @type {import('tailwindcss').Config} */ 
+/** @type {import('tailwindcss').Config} */ 
 module.exports = {
-  content: ["./public//*.html"],
+  content: ["./public/**/*.html"],
   theme: {
     extend: {},
   },
@@ -140,10 +140,13 @@ module.exports = {
 npm init -y
 
 10.Creat Shortcut in package.json > "script"
-"build" : "tailwind -i ./tailwind/main.css -o ./public/tailwind.css"
+"build" : "tailwind -i ./tailwind/main.css -o ./public/tailwind.css",
+"watch" : "tailwind -i ./tailwind/main.css -o ./public/tailwind.css --watch"
 
 11. Terminal
 
 npm run build
+npm run watch
 
--------------------------------------------------------
+
+-----------------------------------------------------
